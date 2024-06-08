@@ -6,16 +6,28 @@
 // And something new and unexpected emerges..
 
 // Napoleon
-public class Pig extends Animal {
+public class Pig extends Animal implements Campaigner {
    boolean isLeadingClass;
    Quote[] quotes;
+
+
 
    public Pig(String name, String symbolize, boolean isLeadingClass, Quote[] quotes) {
       super(name, symbolize, isLeadingClass);
       this.quotes = quotes;
       this.isLeadingClass = isLeadingClass;
+      this.personality = personality;
    }
 
+   @Override
+   public String propose() {
+      String name = getName();
+      if (name.equals("Napoleon")) {
+         return "I propose increasing food rations for hard work!";
+      } else {
+         return "I propose building a windmill for more energy!";
+      }
+   }
 
    @Override
    public void quote() {

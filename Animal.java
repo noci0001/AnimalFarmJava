@@ -7,14 +7,16 @@
 
 import java.util.Random;
 
-public abstract class Animal {
+public abstract class Animal{
    private final String name;
    private final String symbolize;
    private final int quote;
+   public Personality personality;
    public boolean isLeadingClass;
    Random random = new Random();
    public Animal(String name, String symbolize, boolean isLeadingClass) {
       this.name = name;
+      this.personality = new Personality(this.name);
       this.symbolize = symbolize;
       this.quote = random.nextInt(3);
       this.isLeadingClass = isLeadingClass;
@@ -56,4 +58,22 @@ public abstract class Animal {
    public String getSymbol() {
       return symbolize;
    }
-}
+
+
+   // public Campaigner vote(Campaigner candidate1, Campaigner candidate2) {
+   //    String proposal1 = candidate1.propose();
+   //    String proposal2 = candidate2.propose();
+   //    int love = 0;
+   //    int hate = 0;
+
+      // Check if proposals contain keywords that match the animal's personality
+      // if (proposal1.toLowerCase().contains(personality.toLowerCase())) {
+      //     return candidate1;
+      // } else if (proposal2.toLowerCase().contains(personality.toLowerCase())) {
+      //     return candidate2;
+      // } else {
+      //     // Default to the first candidate if neither proposal matches personality
+      //     return candidate1;
+      // }
+  }
+// }

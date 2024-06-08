@@ -17,18 +17,20 @@ public class AnimalFarm {
         new Quote("War is war. The only good human being is a dead one.", "Snowball expresses his belief in the necessity of conflict and violence in the pursuit of the animals' liberation from human oppression. This quote highlights Snowball's militant and uncompromising attitude towards the humans who oppress them."),
         new Quote("Four legs good, two legs bad.", "Snowball introduces this simple slogan as a maxim for the animals to follow, emphasizing the superiority of animalism over human exploitation. This slogan becomes a rallying cry for the animals and encapsulates the core principles of their rebellion against human tyranny.")
     };
-       Animal napoleon = new Pig("Napoleon", "Joseph Stalin", true, napoleonQuotes);
-       Animal snowball = new Pig("Snowball", "the intellectual and ideological opposition to tyranny and oppression, as well as the struggle for social justice and equality", true, snowballQuotes);
+
+       Campaigner napoleon = new Pig("Napoleon", "Joseph Stalin", true, napoleonQuotes);
+       Campaigner snowball = new Pig("Snowball", "the intellectual and ideological opposition to tyranny and oppression, as well as the struggle for social justice and equality", true, snowballQuotes);
        Animal boxer = new Horse("Boxer", "the working class (proletariat)", false);
        Animal benjamin = new Donkey("Benjamin", " the skeptical intellectuals", false);
+       Animal sheep = new Sheep("Sheep", " the gullible masses who are easily swayed, manipulated, and controlled by authoritarian leaders through propaganda, coercion, and exploitation of their ignorance and naivety.", false);
 
-       Animal[] animals = {napoleon, snowball, boxer, benjamin}; 
-       for (Animal animal : animals) {
-         animal.introduction();
-         animal.work();
-         animal.quote();
-         animal.explain_quote();
-       }
+      //  Animal[] animals = {napoleon, snowball, boxer, benjamin}; 
+      //  for (Animal animal : animals) {
+      //    animal.introduction();
+      //    animal.work();
+      //    animal.quote();
+      //    animal.explain_quote();
+      //  }
 
        if (napoleon.equals(snowball)) {
         System.out.println("Being a pig in an Animal Farm is quite thrilling!");
