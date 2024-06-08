@@ -1,6 +1,7 @@
 public class Quote {
    public String quote;
    public String explaination;
+   public Quote[] quotes;
    
    public Quote(String quote, String explaination) {
       this.quote = quote;

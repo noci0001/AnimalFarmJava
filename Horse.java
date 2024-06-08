@@ -36,6 +36,6 @@ public class Horse extends Animal {
 
    @Override
    public void  work() {
-      System.out.println(getName() + ", which represents " + getSymbol()+ " is working hard on the farm.");
+      System.out.println(getName() + " that represents " + getSymbol() + ". He works hard on the farm.");
    }
 }
