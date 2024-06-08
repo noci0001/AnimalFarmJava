@@ -11,11 +11,34 @@ public abstract class Animal {
    private final String name;
    private final String symbolize;
    private final int quote;
+   public boolean isLeadingClass;
    Random random = new Random();
-   public Animal(String name, String symbolize) {
+   public Animal(String name, String symbolize, boolean isLeadingClass) {
       this.name = name;
       this.symbolize = symbolize;
       this.quote = random.nextInt(3);
+      this.isLeadingClass = isLeadingClass;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      if (obj instanceof Animal) {
+         Animal otherAnimal = (Animal) obj;
+         if (otherAnimal.isLeadingClass == false && this.isLeadingClass == false) {
+            System.out.println("All animals are equals, but some animals are more equal than others.\n These two are equals");
+            return true;
+         } else if (otherAnimal.isLeadingClass && this.isLeadingClass){
+            System.out.println("All animals are eqals, but some animals are more equal than others.\nTwo pigs who are more equals then others, are equals between each others.");
+            return true;
+         } else if (otherAnimal.isLeadingClass && this.isLeadingClass == false) {
+            System.out.println("All animals are equals, but some animals are more equal than others.\n" + this.name + "is as equal as anybody else, but " + otherAnimal.name + " is more equal then him because it is a pig.");
+            return false;
+         } else {
+            System.out.println("All animals are equals, but some animals are more equal than others.\n" + this.name + "is more equal then " + otherAnimal.name + " as the latter is not a Pig.");
+            return false;
+         }
+      }
+      return false;
    }
    
    public abstract void introduction();

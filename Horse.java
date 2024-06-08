@@ -9,9 +9,11 @@
 //Boxer
 public class Horse extends Animal {
    Quote[] quotes;
-   public Horse(String name, String symbolize) {
-      super(name, symbolize);
+   boolean isLeadingClass;
+   public Horse(String name, String symbolize, boolean isLeadingClass) {
+      super(name, symbolize, isLeadingClass);
       this.quotes = new Quote[3];
+      this.isLeadingClass = isLeadingClass;
       this.quotes[0] = new Quote("I will work harder!", "Boxer's relentless dedication and commitment to the cause are encapsulated in this motto, representing his unwavering work ethic and loyalty to the farm's ideals.");
       this.quotes[1] = new Quote("Napoleon is always right.", "This quote underscores Boxer's blind faith in Napoleon's leadership, demonstrating his unquestioning acceptance of authority and the regime's propaganda.");
       this.quotes[2] = new Quote("I do not understand it. I would not have believed that such things could happen on our farm. It must be due to some fault in ourselves. The solution, as I see it, is to work harder.", "Boxer's naive belief in the power of hard work to overcome challenges is evident in this quote, reflecting his simplistic worldview and inability to grasp the true nature of the regime's corruption.");

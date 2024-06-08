@@ -18,9 +18,9 @@ public class AnimalFarm {
         new Quote("Four legs good, two legs bad.", "Snowball introduces this simple slogan as a maxim for the animals to follow, emphasizing the superiority of animalism over human exploitation. This slogan becomes a rallying cry for the animals and encapsulates the core principles of their rebellion against human tyranny.")
     };
        Animal napoleon = new Pig("Napoleon", "Joseph Stalin", true, napoleonQuotes);
-       Animal snowball = new Pig("Snowball", "the intellectual and ideological opposition to tyranny and oppression, as well as the struggle for social justice and equality", false, snowballQuotes);
-       Animal boxer = new Horse("Boxer", "the working class (proletariat)");
-       Animal benjamin = new Donkey("Benjamin", " the skeptical intellectuals");
+       Animal snowball = new Pig("Snowball", "the intellectual and ideological opposition to tyranny and oppression, as well as the struggle for social justice and equality", true, snowballQuotes);
+       Animal boxer = new Horse("Boxer", "the working class (proletariat)", false);
+       Animal benjamin = new Donkey("Benjamin", " the skeptical intellectuals", false);
 
        Animal[] animals = {napoleon, snowball, boxer, benjamin}; 
        for (Animal animal : animals) {
@@ -29,5 +29,15 @@ public class AnimalFarm {
          animal.quote();
          animal.explain_quote();
        }
+
+       if (napoleon.equals(snowball)) {
+        System.out.println("Being a pig in an Animal Farm is quite thrilling!");
       }
+      if (napoleon.equals(boxer) == false) {
+        System.out.println("Pretty unfair for " + boxer.getName());
+      }
+      if (boxer.equals(benjamin) == true) {
+        System.out.println(boxer.getName() +" is equal to " + benjamin.getName());
+      }
+    }
 }

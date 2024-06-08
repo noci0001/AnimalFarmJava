@@ -7,13 +7,13 @@
 
 // Napoleon
 public class Pig extends Animal {
-   boolean isLeader;
+   boolean isLeadingClass;
    Quote[] quotes;
 
-   public Pig(String name, String symbolize, boolean isLeader, Quote[] quotes) {
-      super(name, symbolize);
+   public Pig(String name, String symbolize, boolean isLeadingClass, Quote[] quotes) {
+      super(name, symbolize, isLeadingClass);
       this.quotes = quotes;
-      this.isLeader = isLeader;
+      this.isLeadingClass = isLeadingClass;
    }
 
 
