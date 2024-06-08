@@ -1,5 +1,6 @@
 # Animal Farm
 
+![Animal Farm Poster](./AnimalFarm.jpg)
 <p> 'All animals are equal. But some animals are more equal than others.'
 Mr Jones of Manor Farm is so lazy and drunken that one day he forgets to feed his livestock.
 The ensuing rebellion under the leadership of the pigs Napoleon and Snowball leads to the animals taking over the farm.
